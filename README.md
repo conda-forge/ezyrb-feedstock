@@ -1,11 +1,11 @@
-About ezyrb
-===========
+About ezyrb-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ezyrb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mathLab/EZyRB
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ezyrb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Easy Reduced Basis
 
