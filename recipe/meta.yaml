@@ -11,20 +11,20 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
   run:
+    - python >=3.7
     - future
-    - matplotlib-base
     - numpy
-    - python >=3.6
-    - scikit-learn >=1.0
     - scipy
+    - matplotlib-base
+    - scikit-learn >=1.0
     - pytorch
 
 test:
