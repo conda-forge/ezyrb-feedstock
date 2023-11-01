@@ -1,5 +1,5 @@
 {% set name = "ezyrb" %}
-{% set version = "1.3.0.post2310" %}
+{% set version = "1.3.0.post2311" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ezyrb-{{ version }}.tar.gz
-  sha256: 50eee718feb915faae061536505d93e9899eced797da021bbeba07aaaf9e4e39
+  sha256: a573c5335e010173871f84ace6b7948ac04cd1a5ebb0e9c7f252d9509a0e44df
 
 build:
   noarch: python
