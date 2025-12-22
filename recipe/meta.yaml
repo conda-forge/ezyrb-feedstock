@@ -1,5 +1,5 @@
 {% set name = "ezyrb" %}
-{% set version = "1.3.2" %}
+{% set version = "1.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ezyrb-{{ version }}.tar.gz
-  sha256: 6539c0a62c6889d7098bd70a766990f014fdc35b64eb738a76ab9bc8d2bba1db
+  sha256: 779183cb6a4db89944b7ec826e5e1f498615adc968fc5b12b31e6eb8e5b3c2cc
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - scipy
     - matplotlib-base
-    - scikit-learn >=1.0
+    - scikit-learn
     - pytorch
 
 test:
