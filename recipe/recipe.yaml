@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: ezyrb
+  version: "1.3.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ezyrb-${{ version }}.tar.gz
+  sha256: 779183cb6a4db89944b7ec826e5e1f498615adc968fc5b12b31e6eb8e5b3c2cc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - datasets
+    - python >=${{ python_min }}
+    - future
+    - numpy
+    - scipy
+    - matplotlib-base
+    - scikit-learn
+    - pytorch
+
+tests:
+  - python:
+      imports:
+        - ezyrb
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Easy Reduced Basis
+  license: MIT
+  license_file: LICENSE.rst
+  homepage: https://github.com/mathLab/EZyRB
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
